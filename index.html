@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Distance Metrics Comparison</title>
+<meta charset='utf-8'>
+<style>
+
+body { font: 14px/1.4 Helvetica, sans-serif; }
+a { color: #777; }
+.color { height: 50px; float: left; }
+.colors { margin-top: -0.5em; }
+.colors:after { content: ""; display: table; clear:both; }
+.color:hover { z-index: 10; position: relative; outline: 1px solid black; cursor: pointer; }
+
+</style>
+</head>
+<body>
+
+<p>An experiment with color distance metrics. Given 729 colors uniformly distributed across RGB space,
+we start with gray and find the closest color, then the closest to the previous one, etc., until we pick 25 colors.
+Clicking on any color will pick it as the starting one and reset sorting.</p>
+
+<p>Simple RGB distance:</p>
+<div class="colors" id="rgb"></div>
+
+<p><a href="http://www.compuphase.com/cmetric.htm">Riemersma RGB</a> distance:</p>
+<div class="colors" id="riergb"></div>
+
+<p><a href="http://www.progmat.uaem.mx:8080/artVol2Num2/Articulo3Vol2Num2.pdf">Kotsarenko/Ramos YIQ</a> distance:</p>
+<div class="colors" id="yiq"></div>
+
+<p><a href="https://github.com/markusn/color-diff">CIEDE2000</a> distance:</p>
+<div class="colors" id="ciede2000"></div>
+
+<script src='bundle.js'></script>
+<script>
+
+</script>
+</body>
+</html>
